@@ -1,0 +1,16 @@
+.card-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.article-card {
+    margin: 8px;
+    border-color: rgb(181, 4, 4);
+    border-style: none;
+    border-bottom-style: solid;
+}
+
+h3 {
+    font-size: 18px;
+}
