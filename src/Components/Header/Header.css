@@ -1,5 +1,5 @@
 h1 {
-    font-size: 50px;
+    font-size: 45px;
     margin-bottom: 0;
   }
 
@@ -7,5 +7,4 @@ h1 {
     border-color: rgb(181, 4, 4);
     border-style: none;
     border-bottom-style: solid;
-    width: 90%;
 }
