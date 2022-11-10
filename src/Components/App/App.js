@@ -56,17 +56,13 @@ const App = () => {
     <main className="app">
       <Header />
       <Switch>
-        <Route
-          exact
-          path="/:date"
+        <Route exact path="/:date"
           render={({ match }) => {
             const clickedArticle = findArticle(match.params.date);
             return <ArticleDetails article={clickedArticle} />;
           }}
         />
-        <Route
-          exact
-          path="/"
+        <Route exact path="/"
           render={() => {
             return (
               <div>
@@ -78,6 +74,7 @@ const App = () => {
             );
           }}
         />
+        <Route render={() => <p>Error loading page.</p>}/>
       </Switch>
       <div className="footer">
         Copyright (c) 2022 The New York Times Company. All Rights Reserved.
