@@ -1,4 +1,15 @@
-.article-container {
-    display: grid;
-    grid-template-columns: auto auto;
-}
+@media (min-width: 320px) and (max-width: 989px) {
+    .article-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10%;
+    }
+  }
+  /* ipad and laptops  */
+  @media (min-width: 990px) {
+    .article-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin: 0 10%;
+    }
+  }

@@ -1,13 +1,14 @@
 import "./App.css";
-import React, { useState, useEfect, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "../Header/Header";
 import SortForm from "../SortForm/SortForm";
 import ArticleContainer from "../ArticleContainer/ArticleContainer";
-import ArticleDetails from '../ArticleDetails/ArticleDetails'
+import ArticleDetails from "../ArticleDetails/ArticleDetails";
 
 const App = () => {
   const [articles, setArticles] = useState([]);
+  const [sorted, setSorted] = useState(false);
 
   const fetchData = async () => {
     try {
@@ -22,10 +23,28 @@ const App = () => {
   };
 
   const findArticle = (title) => {
-    return articles.filter(article => {
-      return article.title === title
-    })
-  }
+    return articles.filter((article) => {
+      return article.title === title;
+    });
+  };
+
+  const sortArticles = (sortBy) => {
+    let sortedArticles;
+    if (sortBy === "alphabet") {
+      sortedArticles = articles.sort((a, b) => {
+        return a.title === b.title ? 0 : a.title < b.title ? -1 : 1;
+      });
+      setArticles(sortedArticles);
+      !sorted ? setSorted(true) : setSorted(false);
+    } else if (sortBy === "date") {
+      sortedArticles = articles.sort((a, b) => {
+        return a.published_date === b.published_date
+          ? 0 : a.published_date > b.published_date ? -1 : 1;
+      });
+      setArticles(sortedArticles);
+      !sorted ? setSorted(true) : setSorted(false);
+    }
+  };
 
   useEffect(() => {
     fetchData();
@@ -38,30 +57,27 @@ const App = () => {
         <Route
           exact
           path="/:title"
-          render={({match}) => {
-            const clickedArticle = findArticle(match.params.title)
-            console.log(clickedArticle)
-            return (
-              <ArticleDetails article={clickedArticle}/>
-              );
-            }}
+          render={({ match }) => {
+            const clickedArticle = findArticle(match.params.title);
+            return <ArticleDetails article={clickedArticle} />;
+          }}
         />
-            <Route
-              exact
-              path="/"
-              render={() => {
-                return (
-                  <div>
-                    <SortForm />
-                    <ArticleContainer articles={articles} />
-                  </div>
-                );
-              }}
-            />
-        <div className="footer">
-          Copyright (c) 2022 The New York Times Company. All Rights Reserved.
-        </div>
+        <Route
+          exact
+          path="/"
+          render={() => {
+            return (
+              <div>
+                <SortForm sortArticles={sortArticles} />
+                <ArticleContainer sorted={sorted} articles={articles} />
+              </div>
+            );
+          }}
+        />
       </Switch>
+      <div className="footer">
+        Copyright (c) 2022 The New York Times Company. All Rights Reserved.
+      </div>
     </main>
   );
 };
