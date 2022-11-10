@@ -1,0 +1,54 @@
+{
+  "status": "OK",
+  "copyright": "Copyright (c) 2022 The New York Times Company. All Rights Reserved.",
+  "section": "home",
+  "last_updated": "2022-11-08T12:35:24-05:00",
+  "num_results": 29,
+  "results": [
+    {
+    "section": "world",
+    "subsection": "",
+    "title": "The World’s Democracies Ask: Why Can’t America Fix Itself?",
+    "abstract": "Conversations across continents reveal alarm over the United States’ direction, as it slides away from ideals it once pressed other nations to adopt.",
+    "url": "https://www.nytimes.com/2022/11/08/world/us-international-democracy.html",
+    "uri": "nyt://article/311342f5-d511-5df1-a628-3b21e56e1fe8",
+    "published_date": "2022-11-08T07:10:06-05:00",
+    "multimedia": [
+    {
+    "url": "https://static01.nyt.com/images/2022/11/04/world/00global-democracy-01/merlin_215989566_9889e6d9-7842-4b17-80ec-da3ab2fabf89-superJumbo.jpg"
+    }
+    ],
+    "short_url": "https://nyti.ms/3Ebpc0S"
+    },
+    {
+    "section": "world",
+    "subsection": "europe",
+    "title": "Ukrainian officials signal openness to talks with Russia, but with strict conditions.",
+    "abstract": "",
+    "url": "https://www.nytimes.com/live/2022/11/08/world/ukraine-war-news-russia-updates/ukrainian-officials-signal-openness-to-talks-with-russia-but-with-strict-conditions",
+    "uri": "nyt://article/2356fc0e-4fe7-58e3-90fd-a4a28ef713d3",
+    "published_date": "2022-11-08T11:56:31-05:00",
+    "multimedia": [
+    {
+    "url": "https://static01.nyt.com/images/2022/11/08/multimedia/08ukraine-briefing-negotiations-02/08ukraine-briefing-promo-11am-1-6868-superJumbo.jpg"
+    }
+    ],
+    "short_url": "https://nyti.ms/3zZYPs9"
+    },
+    {
+    "section": "climate",
+    "subsection": "",
+    "title": "A few things are hard to find at the conference: hot food, water and trash cans.",
+    "abstract": "",
+    "url": "https://www.nytimes.com/live/2022/11/08/climate/cop27-climate-summit/a-few-things-are-hard-to-find-at-the-conference-hot-food-water-and-trash-cans",
+    "uri": "nyt://article/91430c01-8ac1-50ad-b128-dad8d8ca44a1",
+    "published_date": "2022-11-08T12:14:40-05:00",
+    "multimedia": [
+    {
+    "url": "https://static01.nyt.com/images/2022/11/08/multimedia/08cop27-fyre-fest-01-1-6c38/08cop27-fyre-fest-01-1-6c38-superJumbo.jpg"
+    }
+    ],
+    "short_url": "https://nyti.ms/3WNbGYs"
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import ArticleDetails from "../ArticleDetails/ArticleDetails";
 const App = () => {
   const [articles, setArticles] = useState([]);
   const [sorted, setSorted] = useState(false);
+  const [err, setErr] = useState(false)
 
   const fetchData = async () => {
     try {
@@ -18,13 +19,14 @@ const App = () => {
       const data = await response.json();
       setArticles(data.results);
     } catch (error) {
+      setErr(true)
       console.log(error);
     }
   };
 
-  const findArticle = (title) => {
+  const findArticle = (publishedDate) => {
     return articles.filter((article) => {
-      return article.title === title;
+      return article.published_date === publishedDate;
     });
   };
 
@@ -56,9 +58,9 @@ const App = () => {
       <Switch>
         <Route
           exact
-          path="/:title"
+          path="/:date"
           render={({ match }) => {
-            const clickedArticle = findArticle(match.params.title);
+            const clickedArticle = findArticle(match.params.date);
             return <ArticleDetails article={clickedArticle} />;
           }}
         />
@@ -69,7 +71,9 @@ const App = () => {
             return (
               <div>
                 <SortForm sortArticles={sortArticles} />
+                {!err ? 
                 <ArticleContainer sorted={sorted} articles={articles} />
+                : <h2>Error 404. The data could not be fetched. Please reload and try again</h2>}
               </div>
             );
           }}

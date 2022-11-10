@@ -8,13 +8,13 @@ const ArticleCard = ({ title, image, date }) => {
   const year = date.slice(0, 4);
 
   return (
-    <Link to={`/${title}`}>
+    <Link to={`/${date}`}>
       <div className="article-card">
         <div className="wrapper">
           <img className="card-image" src={image} alt={title} />
         </div>
         <h3>{title}</h3>
-        <p>{`${month}/${day}/${year}`}</p>
+        <p className="card-date">{`${month}/${day}/${year}`}</p>
       </div>
     </Link>
   );
