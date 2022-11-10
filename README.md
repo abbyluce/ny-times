@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# New York Times News Reader
+![Screen Shot 2022-11-09 at 10 26 55 PM](https://user-images.githubusercontent.com/100726140/201008274-f73971e0-c628-44c2-bdbb-2bc79de2906e.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Table of Contents
+  - [Introduction](#introduction)
+  - [Technologies](#technologies)
+  - [Features](#features)
+  - [Possible Future Extensions](#possible-future-extensions)
+  - [Set Up](#set-up)
+  - [Organizational Resources](#organizational-resources)
+  - [Sources](#sources)
+  - [Contributors](#contributors)
+  - [Project Specs](#project-specs)
 
-In the project directory, you can run:
+## Introduction
+  - This application was an eight hour challenge to create an app using the New York Times Top News Stories API to display the top news articles. 
 
-### `npm start`
+## Technologies
+  - React
+  - Router
+  - Cypress
+  - JavaScript
+  - HTML
+  - CSS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+![Screen Shot 2022-11-09 at 10 27 44 PM](https://user-images.githubusercontent.com/100726140/201008411-b3bffde4-c4cf-480b-93bf-8c183bd94c16.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Users can view all articles on the homepage
+- Users can sort these articles by publish date or alphabetically 
+- Users can click to view more details of each article including a link to view the full article on the New York Times
+- Full test suite of all user flows in Cypress including stubbing api calls
+- Responsive CSS design
+- Utilizes React Hooks for all components
 
-### `npm test`
+## Possible Future Extensions
+- Search for an article by name
+- Filter articles by type
+- Add more elaborate styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Challenges
+- Determining MVP based on quick timeline
+- Sort feature to rerender each time it is changed
 
-### `npm run build`
+## Set Up
+```
+git clone git@github.com:abbyluce/ny-times.git
+npm install
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Organizational Resources
+- [github project board](https://github.com/users/abbyluce/projects/3)
+- [conceptual design and component architecture](https://www.figma.com/file/WJnYzisnUho29GvlY1KjlS/NY-News-Reader?node-id=0%3A1)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Sources
+  - [MDN](http://developer.mozilla.org/en-US/)
+  - [W3Schools](https://www.w3schools.com/)
+  - [CSS-TRICKS](https://css-tricks.com/)
+  - [Cypress Docs](https://www.cypress.io/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributors
+  - [Abby Luce](https://github.com/abbyluce)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Specs
+  - The project spec & rubric can be found [here](https://mod4.turing.edu/projects/take_home/take_home_fe)
