@@ -10,7 +10,7 @@ const ArticleCard = ({ title, image, date }) => {
   return (
     <Link to={`/${title}`}>
       <div className="article-card">
-        <div class="wrapper">
+        <div className="wrapper">
           <img className="card-image" src={image} alt={title} />
         </div>
         <h3>{title}</h3>
